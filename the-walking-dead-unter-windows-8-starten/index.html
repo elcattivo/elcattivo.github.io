@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>The Walking Dead unter Windows 8 starten | Byteland</title>
+  <meta name="author" content="El Cattivo">
+  
+  <meta name="description" content="Ich bin ein großer Fan von The Walking Dead, sowohl von der TV-Serie als auch vom gleichnamigen Spiel; das großartige und packende Adventure, nicht der minderwertige mittelmäßige First-Person-Shooter.
+Eines der Dinge, die mir am Spiel sehr gut gefallen haben, ist die schrittweise Veröffentlichung in mehreren Episoden. Dadurch erstreckt sich die Spielzeit über einen relativ langen Zeitraum und man kann sich immer wieder auf die nächste Episode freuen, genau wie bei der Serie. Das führte allerdings auch dazu, dass ich zwischenzeitlich mein Betriebssystem gewechselt habe, von Windows 7 zu Windows 8. Eigentlich kein Problem, sollte man meinen.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="The Walking Dead unter Windows 8 starten"/>
+  <meta property="og:site_name" content="Byteland"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Byteland" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Byteland</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Startseite</a></li>
+    
+      <li><a href="/archives">Archiv</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-08-10T04:00:55.000Z"><a href="/the-walking-dead-unter-windows-8-starten/">10. August 2013</a></time>
+      
+      
+  
+    <h1 class="title">The Walking Dead unter Windows 8 starten</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Ich bin ein großer Fan von <em>The Walking Dead</em>, sowohl von der <a href="http://en.wikipedia.org/wiki/The_Walking_Dead_%28TV_series%29">TV-Serie</a> als auch vom gleichnamigen Spiel; das großartige und packende <a href="http://en.wikipedia.org/wiki/The_Walking_Dead_%28video_game%29">Adventure</a>, nicht der <del>minderwertige</del> mittelmäßige <a href="http://en.wikipedia.org/wiki/The_Walking_Dead:_Survival_Instinct">First-Person-Shooter</a>.</p>
+<p>Eines der Dinge, die mir am Spiel sehr gut gefallen haben, ist die schrittweise Veröffentlichung in mehreren Episoden. Dadurch erstreckt sich die Spielzeit über einen relativ langen Zeitraum und man kann sich immer wieder auf die nächste Episode freuen, genau wie bei der Serie. Das führte allerdings auch dazu, dass ich zwischenzeitlich mein Betriebssystem gewechselt habe, von Windows 7 zu Windows 8. Eigentlich kein Problem, sollte man meinen.</p>
+<a id="more"></a>
+
+<h2 id="Das_Problem">Das Problem</h2>
+<p>Gewissenhaft wie ich bin, habe ich vor dem OS-Upgrade noch meine Spielstände gesichert. Nur auf Steam wollte ich mich in diesem Fall dann doch nicht verlassen. Nach dem Upgrade also die alten Spielstände wiederhergestellt und dann kam der erste Start des Spiels. Genauer gesagt, er kam nicht. Stattdessen gab’s eine böse Überraschung. Das Spiel wollte einfach nicht starten. Da half auch kein Kompatibilitätsmodus.</p>
+<img class=" img-screenshot" title="WalkingDead101.exe has stopped working" src="/the-walking-dead-unter-windows-8-starten/game-error.png"></img>
+
+<h2 id="Ursachenforschung">Ursachenforschung</h2>
+<p>Nachdem der erste Schock überwunden war, habe ich dann erst mal einen Blick auf die Problemdetails geworfen. Es gab also Knatsch mit der <em>dinput8.dll</em>, irgendsoeinem Bestandteil von DirectX.</p>
+<p>Aus weiser Voraussicht habe ich auf die automatische Problembehandlung von Windows verzichtet und stattdessen gleich Google befragt. Wie sich zeigte, ist <a href="http://steamcommunity.com/app/207610/discussions/0/864951022559575731/">das Problem</a> wohlbekannt und tritt auf, wenn man die Steam-Variante von <em>The Walking Dead</em> unter Windows 8 startet und gleichzeitig ein Gamepad angeschlossen hat. Zugegeben, darauf wäre ich, ohne Hilfe, wohl nicht so schnell gekommen. Erfreulicherweise gibt es zwei simple Lösungen.</p>
+<h2 id="Lösung_1_-_Weg_mit_dem_Gamepad">Lösung 1 - Weg mit dem Gamepad</h2>
+<p>So einfach kann es sein; das Gamepad abstöpseln und schon läuft wieder alles. Ist natürlich auf Dauer etwas unschön, wenn man ständig das Gamepad an- und abstecken muss, je nachdem, was man gerade spielt. Richtig problematisch wird diese Lösung jedoch, wenn man <em>The Walking Dead</em> mit Gamepad spielen will. Glücklicherweise gibt es noch eine weitere Lösung, die auch das möglich macht.</p>
+<h2 id="Lösung_2_-_Austauschen_der_dinput8-dll">Lösung 2 - Austauschen der <em>dinput8.dll</em></h2>
+<p>Unter Windows 7 lief noch alles wunderbar. Was liegt also näher, als die Version der <em>dinput8.dll</em> auszuprobieren, die auch unter Windows 7 verwendet wird. Und tatsächlich, damit funktioniert auch unter Windows 8 wieder alles wie gehabt.</p>
+<p>Bleibt die Frage, woher man diese DLL bekommen soll. In allen Lösungen, die ich im Netz zu dem Problem gefunden habe, wurde auf diverse (dubiose) Websites verwiesen, die alle möglichen DLLs anbieten. Zum Teil wurde auch auf selbst hochgeladene Dateien verlinkt. Das ist sicher bequem, setzt aber auch voraus, dass man der jeweiligen Website auch wirklich vertrauen kann.</p>
+<p>Für die <del>Faulen</del> Vertrauensseligen unter euch biete ich hier eine weitere dubiose Quelle für die DLL an; von mir persönlich aus einem originalen Windows-7-Installations-DVD-Image extrahiert.</p>
+<p><strong>Download:</strong> <a href="/the-walking-dead-unter-windows-8-starten/dinput8.dll">dinput8.dll</a><br><small>(142 KB, v6.1.7600.16385, MD5: 5E08AC958BE05247FF1539E0D1CE7905, SHA1: 285C3DC75669DFBCF72AD9FCAC4891E67B5FE00F)</small></p>
+<h3 id="Vertrauen_ist_gut,_Kontrolle_ist_besser">Vertrauen ist gut, Kontrolle ist besser</h3>
+<p>Auf der sicheren Seite ist man, wenn man sich die DLL einfach aus einer bestehenden Windows-7-Installation klaut oder auch direkt von der Installations-CD. Alternativ funktioniert das Ganze übrigens auch mit Windows XP SP3 (frühere Versionen ungetestet). Nimmt man die Datei aus einem bestehenden System, kann man sie einfach kopieren. Die gesuchte Datei findet man jeweils unter den folgenden Pfaden:</p>
+<ul>
+<li><strong>Windows XP</strong>: <em>C:\Windows\System32\dinput8.dll</em></li>
+<li><strong>Windows 7 (x86)</strong>: <em>C:\Windows\System32\dinput8.dll</em></li>
+<li><strong>Windows 7 (x64)</strong>: <em>C:\Windows\SysWOW64\dinput8.dll</em></li>
+</ul>
+<p>Holt man sie direkt von der CD bzw. deren Image, benötigt man noch einen Packprogramm (z.B. <a href="http://www.7-zip.org/">7-Zip</a>). <em>DINPUT8.DL_</em> und <em>install.wim</em> sind jeweils Archive. <em>D</em> steht für den Laufwerksbuchstaben unter dem das Installationsmedium zu finden ist.</p>
+<ul>
+<li><strong>Windows XP - CD</strong>: <em>D:\I386\DINPUT8.DL_\dinput8.dll</em></li>
+<li><strong>Windows 7 (x86) - DVD</strong>: <em>D:\sources\install.wim\1\Windows\System32\dinput8.dll</em></li>
+<li><strong>Windows 7 (x64) - DVD</strong>: <em>D:\sources\install.wim\1\Windows\SysWOW64\dinput8.dll</em></li>
+</ul>
+<h3 id="Der_letzte_Schritt">Der letzte Schritt</h3>
+<p>Hat man die DLL erst einmal, muss sie nur noch ins Installationsverzeichnis von <em>The Walking Dead</em> gelegt werden. Standardmäßig wird das Spiel systemabhängig unter den folgenden Pfaden installiert:</p>
+<ul>
+<li><strong>32-Bit-System</strong>: <em>C:\Program Files (x86)\Steam\SteamApps\common\The Walking Dead\</em></li>
+<li><strong>64-Bit-System</strong>: <em>C:\Program Files\Steam\SteamApps\common\The Walking Dead\</em></li>
+</ul>
+<p>Alternativ kann man auch einfach in seiner <em>Steam-Library</em> den Eintrag für <em>The Walking Dead</em> mit der rechten Maustaste anklicken und dann <em>Properties</em> auswählen. In dem sich öffnenden Fenster findet man dann unter dem Reiter <em>LOCAL FILES</em> den Button <em>BROWSE LOCAL FILES…</em>, der einen direkt zum Installationsordner führt.</p>
+<img class=" img-screenshot" title="Game Properties" src="/the-walking-dead-unter-windows-8-starten/game-properties.png"></img>
+
+<p>Startet man das Spiel nun, wird automatisch die ältere Datei geladen und nicht die Inkompatible aus dem Systemverzeichnis. So einfach ist es also <em>The Walking Dead</em> unter Windows 8 zu spielen. ;-)</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/spiele/">Spiele</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/the-walking-dead/">The Walking Dead</a>, <a href="/tags/windows-8/">Windows 8</a>, <a href="/tags/steam/">Steam</a>, <a href="/tags/directx/">DirectX</a>, <a href="/tags/gamepad/">Gamepad</a>
+  </div>
+
+        
+
+
+  <div class="addthis" data-social-share-privacy="true"></div>
+
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:byteland.cc">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/blog/">Blog</a><small>1</small></li>
+  
+    <li><a href="/categories/netzwerk/">Netzwerk</a><small>2</small></li>
+  
+    <li><a href="/categories/spiele/">Spiele</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2014 El Cattivo
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script src="/js/jquery.cookies.js"></script>
+<script src="/js/jquery.socialshareprivacy.min.autoload.js"></script>
+<script src="/js/jquery.socialshareprivacy.min.de.js"></script>
+
+
+
+<script type="text/javascript">
+var disqus_shortname = 'byteland';
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+<script type="text/javascript">
+$('document').ready(function () {
+  $('section#comment').hide();
+});
+</script>
+
+<script type="application/x-social-share-privacy-settings">
+{
+  "path_prefix": "/",
+  "css_path": "css/jquery.socialshareprivacy.min.css",
+  "language": "de",
+  "layout": "line",
+  "services": {
+    "buffer": { "status": false },
+    "delicious":{ "status": false },
+    "disqus": {
+      "status": true,
+      "shortname": "byteland",
+      "onclick": "$('section#comment').show();$.getScript('//byteland.disqus.com/embed.js');" },
+    "facebook": { "status": false },
+    "fbshare": { "status": false },
+    "flattr": { "status": false },
+    "gplus": { "status": true },
+    "hackernews": { "status": false },
+    "linkedin": { "status": false },
+    "mail": { "status": false },
+    "pinterest": { "status": false },
+    "reddit": { "status": false },
+    "stumbleupon": { "status": false },
+    "tumblr": { "status": false },
+    "twitter": { "status": true },
+    "xing": { "status": false }
+  }
+}
+</script>
+
+
+</body>
+</html>

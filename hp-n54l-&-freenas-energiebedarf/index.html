@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>HP N54L &amp; FreeNAS: Energiebedarf | Byteland</title>
+  <meta name="author" content="El Cattivo">
+  
+  <meta name="description" content="Bereits im Juli letzten Jahres hatte ich mein kleines NAS-Projekt vorgestellt. Eine wichtige Frage, die damals offen blieb, ist, wie viel Energie das NAS im Alltag denn eigentlich benötigt. Neben Speicherplatz und Übertragungsgeschwindigkeit ein entscheidendes Kriterium für ein NAS. Leider ließ sich die Frage damals nicht klären, da ich keine Möglichkeit hatte die Leistungsaufnahme zu messen. Inzwischen habe ich mir ein entsprechendes Messgerät zugelegt und kann nun endlich ein paar Werte präsentieren.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="HP N54L &amp; FreeNAS: Energiebedarf"/>
+  <meta property="og:site_name" content="Byteland"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Byteland" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Byteland</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Startseite</a></li>
+    
+      <li><a href="/archives">Archiv</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-02-22T02:02:34.000Z"><a href="/hp-n54l-&-freenas-energiebedarf/">22. Februar 2014</a></time>
+      
+      
+  
+    <h1 class="title">HP N54L &amp; FreeNAS: Energiebedarf</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Bereits im Juli letzten Jahres hatte ich <a href="http://byteland.cc/nas-im-eigenbau-hp-microserver-freenas/">mein kleines NAS-Projekt</a> vorgestellt. Eine wichtige Frage, die damals offen blieb, ist, wie viel Energie das NAS im Alltag denn eigentlich benötigt. Neben Speicherplatz und Übertragungsgeschwindigkeit ein entscheidendes Kriterium für ein NAS. Leider ließ sich die Frage damals nicht klären, da ich keine Möglichkeit hatte die Leistungsaufnahme zu messen. Inzwischen habe ich mir ein entsprechendes Messgerät zugelegt und kann nun endlich ein paar Werte präsentieren.</p>
+<a id="more"></a>
+
+<h2 id="Ernüchternde_Messergebnisse">Ernüchternde Messergebnisse</h2>
+<ul>
+<li>Power off: <strong>1 W</strong></li>
+<li>Idle: <strong>56 W</strong></li>
+<li>Lesen: <strong>65 W</strong></li>
+<li>Schreiben: <strong>68 W</strong></li>
+</ul>
+<p><em>Power off</em> ist selbsterklärend und bedeutet, das NAS war komplett ausgeschaltet, der Netzstecker jedoch noch angeschlossen. <em>Idle</em> sollte ebenso selbsterklärend sein. Das NAS war an, es erfolgte jedoch kein Zugriff darauf und es wurden auch keine aufwändigen Aufgaben wie z.B. <a href="http://doc.freenas.org/index.php/ZFS_Scrubs">Scrubbing</a> durchgeführt. Beim <em>Lesen</em> und <em>Schreiben</em> wurde jeweils eine mehrere Gigabyte große Testdatei per CIFS vom, beziehungsweise auf, das NAS mit der maximal möglichen Geschwindigkeit übertragen.</p>
+<p>Bei allen Tests waren <strong>keinerlei Energiesparfunktionen</strong> aktiviert, wie zum Beispiel die Reduzierung der HDD-Leistung, das Wechseln in den HDD-Standby-Modus oder der <a href="http://www.freebsd.org/cgi/man.cgi?query=powerd">Power-Saving-Daemon</a>. Zur Messung wurde ein <a href="http://www.brennenstuhl.de/de-DE/steckdosenleisten-schaltgeraete-und-adapter/primera-line-adapter/primera-line-energiemessgeraet-pm-231-e-1.html">Brennenstuhl Primera-Line PM 231 E</a> Energiemessgerät verwendet.</p>
+<h2 id="Fazit_-_Nicht_sparsam,_trotzdem_gut">Fazit - Nicht sparsam, trotzdem gut</h2>
+<p>Zugegeben, ich hatte mit deutlich weniger gerechnet. Vor allem im Leerlauf braucht der N54L deutlich mehr als von mir vermutet. Gerade hier können die Produkte von QNAP, Synology, usw. punkten.</p>
+<p>Allerdings gilt es hier auch die relativ geringen Anschaffungskosten zu berücksichtigen, die inzwischen nochmals deutlich gesunken sind. Nimmt man zum Beispiel ein vergleichbares Modell von Synology, könnte man allein von der Preisdifferenz den N54L problemlos <strong>ein bis zwei Jahre</strong> mit Strom versorgen.</p>
+<p>Mit aktivierten Energiesparmaßnahmen könnte man zudem noch das ein oder andere Watt einsparen. Vor allem die HDDs in den Standby zu schicken, würde im Leerlauf einiges bringen. Die Wartezeit, die durch das Anlaufen der HDDs entsteht, wenn man wieder auf sie zugreifen will, hat sich für mich jedoch als extrem nervig herausgestellt, weshalb ich lieber darauf verzichte. Das ist übrigens auch der Grund, warum ich es nicht bedauere, dass der N54L kein <a href="http://en.wikipedia.org/wiki/Sleep_mode#Sleep">Suspend-to-RAM</a> beherrscht. Bei Desktop-PCs und Notebooks ist das ein tolles Feature. Auf einem Server hat das, meiner Meinung nach, aber nichts zu suchen.</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/netzwerk/">Netzwerk</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/freenas/">FreeNAS</a>, <a href="/tags/nas/">NAS</a>, <a href="/tags/hp-n54l/">HP N54L</a>, <a href="/tags/leistungsaufnahme/">Leistungsaufnahme</a>
+  </div>
+
+        
+
+
+  <div class="addthis" data-social-share-privacy="true"></div>
+
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:byteland.cc">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/blog/">Blog</a><small>1</small></li>
+  
+    <li><a href="/categories/netzwerk/">Netzwerk</a><small>2</small></li>
+  
+    <li><a href="/categories/spiele/">Spiele</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2014 El Cattivo
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script src="/js/jquery.cookies.js"></script>
+<script src="/js/jquery.socialshareprivacy.min.autoload.js"></script>
+<script src="/js/jquery.socialshareprivacy.min.de.js"></script>
+
+
+
+<script type="text/javascript">
+var disqus_shortname = 'byteland';
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+<script type="text/javascript">
+$('document').ready(function () {
+  $('section#comment').hide();
+});
+</script>
+
+<script type="application/x-social-share-privacy-settings">
+{
+  "path_prefix": "/",
+  "css_path": "css/jquery.socialshareprivacy.min.css",
+  "language": "de",
+  "layout": "line",
+  "services": {
+    "buffer": { "status": false },
+    "delicious":{ "status": false },
+    "disqus": {
+      "status": true,
+      "shortname": "byteland",
+      "onclick": "$('section#comment').show();$.getScript('//byteland.disqus.com/embed.js');" },
+    "facebook": { "status": false },
+    "fbshare": { "status": false },
+    "flattr": { "status": false },
+    "gplus": { "status": true },
+    "hackernews": { "status": false },
+    "linkedin": { "status": false },
+    "mail": { "status": false },
+    "pinterest": { "status": false },
+    "reddit": { "status": false },
+    "stumbleupon": { "status": false },
+    "tumblr": { "status": false },
+    "twitter": { "status": true },
+    "xing": { "status": false }
+  }
+}
+</script>
+
+
+</body>
+</html>

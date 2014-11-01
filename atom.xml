@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Byteland]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://byteland.cc/"/>
+  <updated>2014-11-01T12:04:19.668Z</updated>
+  <id>http://byteland.cc/</id>
+  
+  <author>
+    <name><![CDATA[El Cattivo]]></name>
+    <email><![CDATA[elcattivo@byteland.cc]]></email>
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[HP N54L & FreeNAS: Energiebedarf]]></title>
+    <link href="http://byteland.cc/hp-n54l-&-freenas-energiebedarf/"/>
+    <id>http://byteland.cc/hp-n54l-&-freenas-energiebedarf/</id>
+    <published>2014-02-22T02:02:34.000Z</published>
+    <updated>2014-10-25T21:34:32.000Z</updated>
+    <content type="html"><![CDATA[<p>Bereits im Juli letzten Jahres hatte ich <a href="http://byteland.cc/nas-im-eigenbau-hp-microserver-freenas/">mein kleines NAS-Projekt</a> vorgestellt. Eine wichtige Frage, die damals offen blieb, ist, wie viel Energie das NAS im Alltag denn eigentlich benötigt. Neben Speicherplatz und Übertragungsgeschwindigkeit ein entscheidendes Kriterium für ein NAS. Leider ließ sich die Frage damals nicht klären, da ich keine Möglichkeit hatte die Leistungsaufnahme zu messen. Inzwischen habe ich mir ein entsprechendes Messgerät zugelegt und kann nun endlich ein paar Werte präsentieren.</p>
+<a id="more"></a>
+
+<h2 id="Ernüchternde_Messergebnisse">Ernüchternde Messergebnisse</h2>
+<ul>
+<li>Power off: <strong>1 W</strong></li>
+<li>Idle: <strong>56 W</strong></li>
+<li>Lesen: <strong>65 W</strong></li>
+<li>Schreiben: <strong>68 W</strong></li>
+</ul>
+<p><em>Power off</em> ist selbsterklärend und bedeutet, das NAS war komplett ausgeschaltet, der Netzstecker jedoch noch angeschlossen. <em>Idle</em> sollte ebenso selbsterklärend sein. Das NAS war an, es erfolgte jedoch kein Zugriff darauf und es wurden auch keine aufwändigen Aufgaben wie z.B. <a href="http://doc.freenas.org/index.php/ZFS_Scrubs">Scrubbing</a> durchgeführt. Beim <em>Lesen</em> und <em>Schreiben</em> wurde jeweils eine mehrere Gigabyte große Testdatei per CIFS vom, beziehungsweise auf, das NAS mit der maximal möglichen Geschwindigkeit übertragen.</p>
+<p>Bei allen Tests waren <strong>keinerlei Energiesparfunktionen</strong> aktiviert, wie zum Beispiel die Reduzierung der HDD-Leistung, das Wechseln in den HDD-Standby-Modus oder der <a href="http://www.freebsd.org/cgi/man.cgi?query=powerd">Power-Saving-Daemon</a>. Zur Messung wurde ein <a href="http://www.brennenstuhl.de/de-DE/steckdosenleisten-schaltgeraete-und-adapter/primera-line-adapter/primera-line-energiemessgeraet-pm-231-e-1.html">Brennenstuhl Primera-Line PM 231 E</a> Energiemessgerät verwendet.</p>
+<h2 id="Fazit_-_Nicht_sparsam,_trotzdem_gut">Fazit - Nicht sparsam, trotzdem gut</h2>
+<p>Zugegeben, ich hatte mit deutlich weniger gerechnet. Vor allem im Leerlauf braucht der N54L deutlich mehr als von mir vermutet. Gerade hier können die Produkte von QNAP, Synology, usw. punkten.</p>
+<p>Allerdings gilt es hier auch die relativ geringen Anschaffungskosten zu berücksichtigen, die inzwischen nochmals deutlich gesunken sind. Nimmt man zum Beispiel ein vergleichbares Modell von Synology, könnte man allein von der Preisdifferenz den N54L problemlos <strong>ein bis zwei Jahre</strong> mit Strom versorgen.</p>
+<p>Mit aktivierten Energiesparmaßnahmen könnte man zudem noch das ein oder andere Watt einsparen. Vor allem die HDDs in den Standby zu schicken, würde im Leerlauf einiges bringen. Die Wartezeit, die durch das Anlaufen der HDDs entsteht, wenn man wieder auf sie zugreifen will, hat sich für mich jedoch als extrem nervig herausgestellt, weshalb ich lieber darauf verzichte. Das ist übrigens auch der Grund, warum ich es nicht bedauere, dass der N54L kein <a href="http://en.wikipedia.org/wiki/Sleep_mode#Sleep">Suspend-to-RAM</a> beherrscht. Bei Desktop-PCs und Notebooks ist das ein tolles Feature. Auf einem Server hat das, meiner Meinung nach, aber nichts zu suchen.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Bereits im Juli letzten Jahres hatte ich <a href="http://byteland.cc/nas-im-eigenbau-hp-microserver-freenas/">mein kleines NAS-Projekt</a> vorgestellt. Eine wichtige Frage, die damals offen blieb, ist, wie viel Energie das NAS im Alltag denn eigentlich benötigt. Neben Speicherplatz und Übertragungsgeschwindigkeit ein entscheidendes Kriterium für ein NAS. Leider ließ sich die Frage damals nicht klären, da ich keine Möglichkeit hatte die Leistungsaufnahme zu messen. Inzwischen habe ich mir ein entsprechendes Messgerät zugelegt und kann nun endlich ein paar Werte präsentieren.</p>
+]]>
+    
+    </summary>
+    
+      <category term="FreeNAS" scheme="http://byteland.cc/tags/freenas/"/>
+    
+      <category term="NAS" scheme="http://byteland.cc/tags/nas/"/>
+    
+      <category term="HP N54L" scheme="http://byteland.cc/tags/hp-n54l/"/>
+    
+      <category term="Leistungsaufnahme" scheme="http://byteland.cc/tags/leistungsaufnahme/"/>
+    
+      <category term="Netzwerk" scheme="http://byteland.cc/categories/netzwerk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[The Walking Dead unter Windows 8 starten]]></title>
+    <link href="http://byteland.cc/the-walking-dead-unter-windows-8-starten/"/>
+    <id>http://byteland.cc/the-walking-dead-unter-windows-8-starten/</id>
+    <published>2013-08-10T04:00:55.000Z</published>
+    <updated>2014-11-01T11:20:55.000Z</updated>
+    <content type="html"><![CDATA[<p>Ich bin ein großer Fan von <em>The Walking Dead</em>, sowohl von der <a href="http://en.wikipedia.org/wiki/The_Walking_Dead_%28TV_series%29">TV-Serie</a> als auch vom gleichnamigen Spiel; das großartige und packende <a href="http://en.wikipedia.org/wiki/The_Walking_Dead_%28video_game%29">Adventure</a>, nicht der <del>minderwertige</del> mittelmäßige <a href="http://en.wikipedia.org/wiki/The_Walking_Dead:_Survival_Instinct">First-Person-Shooter</a>.</p>
+<p>Eines der Dinge, die mir am Spiel sehr gut gefallen haben, ist die schrittweise Veröffentlichung in mehreren Episoden. Dadurch erstreckt sich die Spielzeit über einen relativ langen Zeitraum und man kann sich immer wieder auf die nächste Episode freuen, genau wie bei der Serie. Das führte allerdings auch dazu, dass ich zwischenzeitlich mein Betriebssystem gewechselt habe, von Windows 7 zu Windows 8. Eigentlich kein Problem, sollte man meinen.</p>
+<a id="more"></a>
+
+<h2 id="Das_Problem">Das Problem</h2>
+<p>Gewissenhaft wie ich bin, habe ich vor dem OS-Upgrade noch meine Spielstände gesichert. Nur auf Steam wollte ich mich in diesem Fall dann doch nicht verlassen. Nach dem Upgrade also die alten Spielstände wiederhergestellt und dann kam der erste Start des Spiels. Genauer gesagt, er kam nicht. Stattdessen gab’s eine böse Überraschung. Das Spiel wollte einfach nicht starten. Da half auch kein Kompatibilitätsmodus.</p>
+<img class=" img-screenshot" title="WalkingDead101.exe has stopped working" src="/the-walking-dead-unter-windows-8-starten/game-error.png"></img>
+
+<h2 id="Ursachenforschung">Ursachenforschung</h2>
+<p>Nachdem der erste Schock überwunden war, habe ich dann erst mal einen Blick auf die Problemdetails geworfen. Es gab also Knatsch mit der <em>dinput8.dll</em>, irgendsoeinem Bestandteil von DirectX.</p>
+<p>Aus weiser Voraussicht habe ich auf die automatische Problembehandlung von Windows verzichtet und stattdessen gleich Google befragt. Wie sich zeigte, ist <a href="http://steamcommunity.com/app/207610/discussions/0/864951022559575731/">das Problem</a> wohlbekannt und tritt auf, wenn man die Steam-Variante von <em>The Walking Dead</em> unter Windows 8 startet und gleichzeitig ein Gamepad angeschlossen hat. Zugegeben, darauf wäre ich, ohne Hilfe, wohl nicht so schnell gekommen. Erfreulicherweise gibt es zwei simple Lösungen.</p>
+<h2 id="Lösung_1_-_Weg_mit_dem_Gamepad">Lösung 1 - Weg mit dem Gamepad</h2>
+<p>So einfach kann es sein; das Gamepad abstöpseln und schon läuft wieder alles. Ist natürlich auf Dauer etwas unschön, wenn man ständig das Gamepad an- und abstecken muss, je nachdem, was man gerade spielt. Richtig problematisch wird diese Lösung jedoch, wenn man <em>The Walking Dead</em> mit Gamepad spielen will. Glücklicherweise gibt es noch eine weitere Lösung, die auch das möglich macht.</p>
+<h2 id="Lösung_2_-_Austauschen_der_dinput8-dll">Lösung 2 - Austauschen der <em>dinput8.dll</em></h2>
+<p>Unter Windows 7 lief noch alles wunderbar. Was liegt also näher, als die Version der <em>dinput8.dll</em> auszuprobieren, die auch unter Windows 7 verwendet wird. Und tatsächlich, damit funktioniert auch unter Windows 8 wieder alles wie gehabt.</p>
+<p>Bleibt die Frage, woher man diese DLL bekommen soll. In allen Lösungen, die ich im Netz zu dem Problem gefunden habe, wurde auf diverse (dubiose) Websites verwiesen, die alle möglichen DLLs anbieten. Zum Teil wurde auch auf selbst hochgeladene Dateien verlinkt. Das ist sicher bequem, setzt aber auch voraus, dass man der jeweiligen Website auch wirklich vertrauen kann.</p>
+<p>Für die <del>Faulen</del> Vertrauensseligen unter euch biete ich hier eine weitere dubiose Quelle für die DLL an; von mir persönlich aus einem originalen Windows-7-Installations-DVD-Image extrahiert.</p>
+<p><strong>Download:</strong> <a href="/the-walking-dead-unter-windows-8-starten/dinput8.dll">dinput8.dll</a><br><small>(142 KB, v6.1.7600.16385, MD5: 5E08AC958BE05247FF1539E0D1CE7905, SHA1: 285C3DC75669DFBCF72AD9FCAC4891E67B5FE00F)</small></p>
+<h3 id="Vertrauen_ist_gut,_Kontrolle_ist_besser">Vertrauen ist gut, Kontrolle ist besser</h3>
+<p>Auf der sicheren Seite ist man, wenn man sich die DLL einfach aus einer bestehenden Windows-7-Installation klaut oder auch direkt von der Installations-CD. Alternativ funktioniert das Ganze übrigens auch mit Windows XP SP3 (frühere Versionen ungetestet). Nimmt man die Datei aus einem bestehenden System, kann man sie einfach kopieren. Die gesuchte Datei findet man jeweils unter den folgenden Pfaden:</p>
+<ul>
+<li><strong>Windows XP</strong>: <em>C:\Windows\System32\dinput8.dll</em></li>
+<li><strong>Windows 7 (x86)</strong>: <em>C:\Windows\System32\dinput8.dll</em></li>
+<li><strong>Windows 7 (x64)</strong>: <em>C:\Windows\SysWOW64\dinput8.dll</em></li>
+</ul>
+<p>Holt man sie direkt von der CD bzw. deren Image, benötigt man noch einen Packprogramm (z.B. <a href="http://www.7-zip.org/">7-Zip</a>). <em>DINPUT8.DL_</em> und <em>install.wim</em> sind jeweils Archive. <em>D</em> steht für den Laufwerksbuchstaben unter dem das Installationsmedium zu finden ist.</p>
+<ul>
+<li><strong>Windows XP - CD</strong>: <em>D:\I386\DINPUT8.DL_\dinput8.dll</em></li>
+<li><strong>Windows 7 (x86) - DVD</strong>: <em>D:\sources\install.wim\1\Windows\System32\dinput8.dll</em></li>
+<li><strong>Windows 7 (x64) - DVD</strong>: <em>D:\sources\install.wim\1\Windows\SysWOW64\dinput8.dll</em></li>
+</ul>
+<h3 id="Der_letzte_Schritt">Der letzte Schritt</h3>
+<p>Hat man die DLL erst einmal, muss sie nur noch ins Installationsverzeichnis von <em>The Walking Dead</em> gelegt werden. Standardmäßig wird das Spiel systemabhängig unter den folgenden Pfaden installiert:</p>
+<ul>
+<li><strong>32-Bit-System</strong>: <em>C:\Program Files (x86)\Steam\SteamApps\common\The Walking Dead\</em></li>
+<li><strong>64-Bit-System</strong>: <em>C:\Program Files\Steam\SteamApps\common\The Walking Dead\</em></li>
+</ul>
+<p>Alternativ kann man auch einfach in seiner <em>Steam-Library</em> den Eintrag für <em>The Walking Dead</em> mit der rechten Maustaste anklicken und dann <em>Properties</em> auswählen. In dem sich öffnenden Fenster findet man dann unter dem Reiter <em>LOCAL FILES</em> den Button <em>BROWSE LOCAL FILES…</em>, der einen direkt zum Installationsordner führt.</p>
+<img class=" img-screenshot" title="Game Properties" src="/the-walking-dead-unter-windows-8-starten/game-properties.png"></img>
+
+<p>Startet man das Spiel nun, wird automatisch die ältere Datei geladen und nicht die Inkompatible aus dem Systemverzeichnis. So einfach ist es also <em>The Walking Dead</em> unter Windows 8 zu spielen. ;-)</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Ich bin ein großer Fan von <em>The Walking Dead</em>, sowohl von der <a href="http://en.wikipedia.org/wiki/The_Walking_Dead_%28TV_series%29">TV-Serie</a> als auch vom gleichnamigen Spiel; das großartige und packende <a href="http://en.wikipedia.org/wiki/The_Walking_Dead_%28video_game%29">Adventure</a>, nicht der <del>minderwertige</del> mittelmäßige <a href="http://en.wikipedia.org/wiki/The_Walking_Dead:_Survival_Instinct">First-Person-Shooter</a>.</p>
+<p>Eines der Dinge, die mir am Spiel sehr gut gefallen haben, ist die schrittweise Veröffentlichung in mehreren Episoden. Dadurch erstreckt sich die Spielzeit über einen relativ langen Zeitraum und man kann sich immer wieder auf die nächste Episode freuen, genau wie bei der Serie. Das führte allerdings auch dazu, dass ich zwischenzeitlich mein Betriebssystem gewechselt habe, von Windows 7 zu Windows 8. Eigentlich kein Problem, sollte man meinen.</p>
+]]>
+    
+    </summary>
+    
+      <category term="The Walking Dead" scheme="http://byteland.cc/tags/the-walking-dead/"/>
+    
+      <category term="Windows 8" scheme="http://byteland.cc/tags/windows-8/"/>
+    
+      <category term="Steam" scheme="http://byteland.cc/tags/steam/"/>
+    
+      <category term="DirectX" scheme="http://byteland.cc/tags/directx/"/>
+    
+      <category term="Gamepad" scheme="http://byteland.cc/tags/gamepad/"/>
+    
+      <category term="Spiele" scheme="http://byteland.cc/categories/spiele/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[NAS im Eigenbau: HP MicroServer & FreeNAS]]></title>
+    <link href="http://byteland.cc/nas-im-eigenbau-hp-microserver-freenas/"/>
+    <id>http://byteland.cc/nas-im-eigenbau-hp-microserver-freenas/</id>
+    <published>2013-07-21T20:25:42.000Z</published>
+    <updated>2014-11-01T11:00:30.000Z</updated>
+    <content type="html"><![CDATA[<p>Schon seit einiger Zeit herrschte auf meiner Festplatte chronischer Platzmangel. Filme, Musik und Fotos verbrauchen eine Menge Speicherplatz und sobald etwas Neues zur Sammlung hinzukam, musste dafür etwas Altes weichen. Weil das auf Dauer wirklich keinen Spaß macht und ich meine Mediendateien gerne bequem und dauerhaft im LAN zur Verfügung stellen wollte, war die Lösung klar: <em>Ein NAS musste her!</em></p>
+<p>Was nun folgte war die Qual der Wahl. <a href="http://www.drobo.com/">Drobo</a>, <a href="http://www.qnap.com/">QNAP</a>, <a href="http://www.synology.com/">Synology</a>, <a href="http://www.readynas.com/">ReadyNAS</a>, oder doch etwas Selbstgebasteltes? Die Auswahl an Anbietern und erst recht an angebotenen Geräten ist doch recht beachtlich. Nach einem ersten Blick auf die jeweiligen Preise, hatte sich das Feld jedoch schnell gelichtet. Eine Fertig-NAS-Lösung kam aufgrund des bescheidenen Preis-Leistungs-Verhältnisses nicht in Frage. Es sollte also eine Eigenbaulösung werden.</p>
+<a id="more"></a>
+
+<h2 id="HP_ProLiant_MicroServer_to_the_Rescue">HP ProLiant MicroServer to the Rescue</h2>
+<img class=" img-topic" title="HP ProLiant MicroServer N54L - Front geschlossen" src="/nas-im-eigenbau-hp-microserver-freenas/n54l-front-closed.jpg"></img><br><img class=" img-topic" title="HP ProLiant MicroServer N54L - Front offen" src="/nas-im-eigenbau-hp-microserver-freenas/n54l-front-open.jpg"></img><br><img class=" img-topic" title="HP ProLiant MicroServer N54L - Rückseite" src="/nas-im-eigenbau-hp-microserver-freenas/n54l-back.jpg"></img>
+
+<p>Glücklicherweise sind die MicroServer von HP wie geschaffen für den Einsatz als NAS und noch dazu relativ preiswert. In meinem Fall wurde es ein <a href="http://www8.hp.com/uk/en/products/proliant-servers/product-detail.html?oid=5336624">HP ProLiant MicroServer N54L</a>. Für gerade mal <strong>185 €</strong> bietet er folgendes:</p>
+<ul>
+<li>AMD Turion II Neo N54L Dual-Core @ 2,2 Ghz</li>
+<li>2 GB DDR3 Unbuffered ECC RAM @ 800 MHz (PC3-10600E)</li>
+<li>Onboard AMD HD4200 VGA: 128MB, 1920x1200 @ 60hz</li>
+<li>6x SATA 2.0; 4x intern/HDD, 1x intern/ODD, 1x eSATA extern/Rückseite</li>
+<li>4x 3,5” HDD-Bays, 1x 5,25” ODD-Bay</li>
+<li>Onboard NC107i PCI Express Gigabit 10/100/1000</li>
+<li>1x PCIe 2.0 16x Low-Profile, 1x PCIe 2.0 1x Low-Profile</li>
+<li>7x USB 2.0; 2 Rückseite, 4 Front, 1 intern</li>
+<li>150 W Netzteil</li>
+</ul>
+<p>Der Arbeitsspeicher lässt sich, entgegen der Behauptung von HP, auf bis zu <em>16 GB (2x8)</em> erweitern. Neben <a href="http://en.wikipedia.org/wiki/ECC_memory">ECC-RAM</a> lässt sich auch ganz normaler DDR3-RAM verbauen. Auch die Kombination von ECC und normalem RAM ist angeblich möglich.</p>
+<p>Offiziell arbeiten der ODD-SATA-Anschluss und der eSATA-Anschluss mit nur 1,5 Gbit/s im <em>IDE-Modus</em>. Mit einem <a href="http://www.avforums.com/forums/networking-nas/1521657-hp-n36l-n40l-n54l-microserver-updated-ahci-bios-support.html">modifizierten BIOS von TheBay</a> lassen sich beide jedoch mit schnellen <em>3,0 Gbit/s</em> im <em>AHCI-Modus</em> betreiben. Da sich im 5,25”-Schacht problemlos eine weitere 3,5”-HDD einbauen lässt, hat man letztendlich ein <strong>5-Bay-NAS</strong>; mit etwas Bastelarbeit oder einer externen HDD sogar ein <em>6-Bay-NAS</em>. Manche Leute haben es auch geschafft bis zu <em>neun 3,5” Platten</em> unterzubringen. Aufgrund der Wärmeentwicklung bezweifle ich allerdings, dass das auf Dauer gutgeht.</p>
+<p>Der Server macht einen wirklich gut durchdachten Eindruck. Alle Komponenten sind mit relativ geringem Aufwand erreichbar. Auch die Verarbeitung lässt keine Wünsche offen. Besonders nett: Alle benötigten Schrauben so wie Werkzeug sind auf der Innenseite der Fronttür untergebracht. Man kann also direkt loslegen.</p>
+<h2 id="Darf’s_auch_ein_bisschen_mehr_sein?">Darf’s auch ein bisschen mehr sein?</h2>
+<p>Blieb noch die Frage offen, wie ich mein Eigenbau-NAS bestücken sollte. Klar war, dass es mit fünf HDDs auf jeden Fall voll bestückt werden soll. Nicht so klar war die Größe der HDDs; drei Terabyte oder doch besser vier? Letztendlich hat der Preis entschieden und meine Wahl fiel auf die günstigeren <a href="http://wd.com/global/products/specs/?driveID=1087&amp;language=3">WD Red 3 TB Platten</a>.</p>
+<p>Bei wem der Geldbeutel etwas lockerer sitzt, dem seien die etwas teureren <a href="http://www.seagate.com/de/de/internal-hard-drives/nas-drives/nas-hdd/">4 TB NAS-Festplatten von Seagate</a> empfohlen. Hier kostet das Gigabyte zwar etwas mehr, dafür ist die Performance aber auch ein klein wenig besser.</p>
+<p>Von <em>normalen</em> Desktop-HDDs würde ich für den NAS-Betrieb übrigens abraten. Sollte man ein wirklich großes NAS mit mehr als fünf HDDs planen, sollte man sogar über den Einsatz von echten Server-Platten nachdenken. Ohne <em>Rotational-Vibration-Cancellation</em> kann es ansonsten zu Problemen kommen.</p>
+<p>Beim Arbeitsspeicher war dann nicht kleckern sondern klotzen angesagt. Da ich unbedingt <a href="http://www.freenas.org/">FreeNAS</a> in Verbindung mit <a href="http://en.wikipedia.org/wiki/ZFS">ZFS</a> verwenden wollte, musste es schon etwas mehr sein als die vorinstallierten 2 GB. Eine Faustregel besagt, dass man etwa <em>1 GB RAM pro 1 TB Festplattenspeicher</em> einplanen sollte. Bei den von mir angedachten 15 TB waren 16 GB RAM also ideal. Außerdem habe ich mich für den etwas teureren ECC-RAM entschieden, da ZFS den Arbeitsspeicher intensiv nutzt und die Fehlerkorrektur von ZFS nur bei Daten im Dateisystem zur Anwendung kommt.</p>
+<p>Um das ganze Paket abzurunden, habe ich mir noch eine etwas performantere Anbindung ans LAN gegönnt. Anstatt den Onboard-Gigabit-Anschluss zu nutzen, kommt eine <a href="http://h18004.www1.hp.com/products/servers/networking/nc360t/">HP NC360T PCIe Dual Port Gigabit Adapter</a> zum Einsatz. Dieser bietet unter anderem <a href="https://en.wikipedia.org/wiki/Link_aggregation">Link-Aggregation</a> und <a href="http://en.wikipedia.org/wiki/Jumbo_frame">Jumbo-Frames</a> und ist bereits für ca. <strong>25 €</strong> gebraucht auf eBay erhältlich.</p>
+<h2 id="Zusammenfassung">Zusammenfassung</h2>
+<p>Alles in allem habe ich folgende Teile benötigt:</p>
+<ul>
+<li>HP ProLiant MicroServer N54L - 185 €</li>
+<li>Kingston 16 GB Unbuffered ECC DDR3 RAM - 147 €</li>
+<li>HP NC360T PCIe Dual Port Gigabit Adapter - 25 €</li>
+<li>5x WD Red 3 TB - 585 €</li>
+<li>Sharkoon HDD Vibe FIxer - 14 €</li>
+<li>Molex-zu-SATA-Power-Adapter - 0 € (bereits vorhanden)</li>
+<li>SATA-Kabel - 0 € (bereits vorhanden)</li>
+</ul>
+<p>Macht insgesamt also <strong>956 €</strong> für ein performantes NAS mit <em>12 TB nutzbarem Speicher</em> und genug Redundanz um den Verlust einer Platte zu verkraften; vorausgesetzt man nutzt <a href="http://en.wikipedia.org/wiki/Non-standard_RAID_levels#RAID-Z">RAID-Z1</a> oder <a href="http://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_5">RAID-5</a>. Falls man kein ZFS nutzt, einen etwas einfacheren 5,25”-Einbaurahmen kauft und auf den Dual-Port-LAN-Adapter verzichtet, könnte man die Kosten sogar auf 773 € reduzieren.</p>
+<h3 id="Weitere_Infos">Weitere Infos</h3>
+<ul>
+<li><a href="http://www.hardwareluxx.de/community/f101/hp-proliant-n36l-n40l-n54l-microserver-752079.html">HP ProLiant MicroServer N36L/N40L/N54L Sammelthread</a></li>
+<li><a href="http://n40l.wikia.com/wiki/HP_MicroServer_N40L_Wiki">HP MicroServer N40L Wiki</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Schon seit einiger Zeit herrschte auf meiner Festplatte chronischer Platzmangel. Filme, Musik und Fotos verbrauchen eine Menge Speicherplatz und sobald etwas Neues zur Sammlung hinzukam, musste dafür etwas Altes weichen. Weil das auf Dauer wirklich keinen Spaß macht und ich meine Mediendateien gerne bequem und dauerhaft im LAN zur Verfügung stellen wollte, war die Lösung klar: <em>Ein NAS musste her!</em></p>
+<p>Was nun folgte war die Qual der Wahl. <a href="http://www.drobo.com/">Drobo</a>, <a href="http://www.qnap.com/">QNAP</a>, <a href="http://www.synology.com/">Synology</a>, <a href="http://www.readynas.com/">ReadyNAS</a>, oder doch etwas Selbstgebasteltes? Die Auswahl an Anbietern und erst recht an angebotenen Geräten ist doch recht beachtlich. Nach einem ersten Blick auf die jeweiligen Preise, hatte sich das Feld jedoch schnell gelichtet. Eine Fertig-NAS-Lösung kam aufgrund des bescheidenen Preis-Leistungs-Verhältnisses nicht in Frage. Es sollte also eine Eigenbaulösung werden.</p>
+]]>
+    
+    </summary>
+    
+      <category term="FreeNAS" scheme="http://byteland.cc/tags/freenas/"/>
+    
+      <category term="NAS" scheme="http://byteland.cc/tags/nas/"/>
+    
+      <category term="HP N54L" scheme="http://byteland.cc/tags/hp-n54l/"/>
+    
+      <category term="ZFS" scheme="http://byteland.cc/tags/zfs/"/>
+    
+      <category term="Netzwerk" scheme="http://byteland.cc/categories/netzwerk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World!]]></title>
+    <link href="http://byteland.cc/hello-world/"/>
+    <id>http://byteland.cc/hello-world/</id>
+    <published>2013-07-13T22:01:11.000Z</published>
+    <updated>2014-10-25T21:11:54.000Z</updated>
+    <content type="html"><![CDATA[<p>Der ein oder andere Leser wird sich jetzt vielleicht denken, schon wieder ein überflüssiger Blog mehr in den Weiten des Internet. Und damit hätte er auch vollkommen Recht. Würde man mich fragen, welchen Nutzen dieser Blog hat, ich hätte im Moment keine sinnvolle Antwort parat.</p>
+<p>Die Themen, welche man hier in Zukunft finden wird, hat mit großer Wahrscheinlichkeit schon irgendjemand, irgendwo deutlich ausführlicher und kompetenter behandelt. Hinzu kommt, dass ich eigentlich unglaublich schreibfaul bin, was in Verbindung mit einem Blog eher kontraproduktiv ist. Vermutlich spielt bei meiner Motivation zu bloggen der <a href="https://de.wikipedia.org/wiki/Me-too-Produkt">Me-too-Faktor</a> eine entscheidende Rolle. Anders kann ich mir dieses Vorhaben eigentlich nicht erklären.</p>
+<p>Nach diesen motivierenden Worten folgen nun ein paar weiterführende Informationen.</p>
+<a id="more"></a>
+
+<h2 id="Themen">Themen</h2>
+<p>Thematisch wird sich der Inhalt des Blogs, wie der Name schon vermuten lässt, im IT-Bereich bewegen. Der Schwerpunkt wird dabei auf Softwareentwicklung bzw. Programmierung liegen. Andere Themen sind dabei natürlich nicht ausgeschlossen. Ich werde aber versuchen die Themenwahl halbwegs konsistent zu halten. Das heißt “Omas Backrezepte” wird man hier zum Beispiel nicht finden.</p>
+<h2 id="Verwendete_Technik">Verwendete Technik</h2>
+<p>Erstellt wird der Blog mit Hilfe von <a href="http://zespia.tw/hexo/">Hexo</a>, einer <em>statischen Blogging-Engine</em> basierend auf <a href="http://nodejs.org/">Node.js</a>. Kurz gesagt, <a href="http://octopress.org/">Octopress</a> für JavaScript. Die damit erstellten statischen Seiten landen dann auf <a href="http://pages.github.com/">Github Pages</a>. Versioniert wird das Ganze per <a href="http://git-scm.com/">Git</a>.</p>
+<p>Die Entscheidung für eine Lösung mit statischen Seiten und gegen <a href="http://wordpress.org/">Wordpress</a> lag letztendlich an zwei Gründen. Zum einen entstehen geringeren Anforderungen was das Hosting betrifft und damit verbunden auch geringere Kosten. Zum anderen werden dadurch mögliche Sicherheitslücken im Blog selbst ausgeschlossen. Dass es am Ende Hexo und nicht Octopress geworden ist, liegt daran, dass ich mich zurzeit vermehrt mit JavaScript beschäftite und sich deshalb eine Node.js-basierte Lösung einfach angeboten hat.</p>
+<h2 id="Werbung">Werbung</h2>
+<p>Werbung gibt‘s nicht und wird es hier auch in Zukunft nicht geben. Ich betrachte das Ganze als mein Hobby und sehe deshalb keinen Grund, warum ich euch indirekt dafür bezahlen lassen sollte. Die meisten, wie auch ich selbst, surfen inzwischen ohnehin mit Ad-Blocker. Das sieht man auch immer wieder sehr schön an dem Gejammer derer, die meinen, sich ihre Freizeitbeschäftigung von ihren Besuchern finanzieren lassen zu müssen.</p>
+<h2 id="Datenschutz">Datenschutz</h2>
+<p>Ich nutze <a href="http://www.google.com/analytics/">Google Analytics</a> um zu sehen, wie viele Leute sich hierher verirren und welche Themen sie angelockt haben. Dazu gibt es auch <strong>kein Opt-out</strong> und erst recht <strong>kein Opt-in</strong>, da ich mir die Statistiken ansonsten gleich in die Haare schmieren könnte. Wer sich daran stört, soll das entsprechende Script einfach blocken.</p>
+<p>Als kleinen Ausgleich dazu gibt es keinerlei Integration von Facebook. Wer allerdings der Meinung ist, einer der Artikel im Blog sei so großartig, dass er ihn unbedingt teilen will, hat (zumindest im Moment noch) die Möglichkeit das per <a href="https://www.twitter.com/">Twitter</a> und <a href="https://plus.google.com/">Google+</a> zu tun. Verwendet wird dafür der Dienst <a href="https://www.addthis.com/">AddThis</a>.</p>
+<p>Für Kommentare kommt der Quasi-Standard für statische Blogs, <a href="https://disqus.com/">Disqus</a>, zum Einsatz.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Der ein oder andere Leser wird sich jetzt vielleicht denken, schon wieder ein überflüssiger Blog mehr in den Weiten des Internet. Und damit hätte er auch vollkommen Recht. Würde man mich fragen, welchen Nutzen dieser Blog hat, ich hätte im Moment keine sinnvolle Antwort parat.</p>
+<p>Die Themen, welche man hier in Zukunft finden wird, hat mit großer Wahrscheinlichkeit schon irgendjemand, irgendwo deutlich ausführlicher und kompetenter behandelt. Hinzu kommt, dass ich eigentlich unglaublich schreibfaul bin, was in Verbindung mit einem Blog eher kontraproduktiv ist. Vermutlich spielt bei meiner Motivation zu bloggen der <a href="https://de.wikipedia.org/wiki/Me-too-Produkt">Me-too-Faktor</a> eine entscheidende Rolle. Anders kann ich mir dieses Vorhaben eigentlich nicht erklären.</p>
+<p>Nach diesen motivierenden Worten folgen nun ein paar weiterführende Informationen.</p>
+]]>
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://byteland.cc/categories/blog/"/>
+    
+  </entry>
+  
+</feed>

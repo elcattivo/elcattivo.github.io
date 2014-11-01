@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>NAS im Eigenbau: HP MicroServer &amp; FreeNAS | Byteland</title>
+  <meta name="author" content="El Cattivo">
+  
+  <meta name="description" content="Schon seit einiger Zeit herrschte auf meiner Festplatte chronischer Platzmangel. Filme, Musik und Fotos verbrauchen eine Menge Speicherplatz und sobald etwas Neues zur Sammlung hinzukam, musste dafür etwas Altes weichen. Weil das auf Dauer wirklich keinen Spaß macht und ich meine Mediendateien gerne bequem und dauerhaft im LAN zur Verfügung stellen wollte, war die Lösung klar: Ein NAS musste her!
+Was nun folgte war die Qual der Wahl. Drobo, QNAP, Synology, ReadyNAS, oder doch etwas Selbstgebasteltes? Die Auswahl an Anbietern und erst recht an angebotenen Geräten ist doch recht beachtlich. Nach einem ersten Blick auf die jeweiligen Preise, hatte sich das Feld jedoch schnell gelichtet. Eine Fertig-NAS-Lösung kam aufgrund des bescheidenen Preis-Leistungs-Verhältnisses nicht in Frage. Es sollte also eine Eigenbaulösung werden.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="NAS im Eigenbau: HP MicroServer &amp; FreeNAS"/>
+  <meta property="og:site_name" content="Byteland"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Byteland" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Byteland</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Startseite</a></li>
+    
+      <li><a href="/archives">Archiv</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-07-21T20:25:42.000Z"><a href="/nas-im-eigenbau-hp-microserver-freenas/">21. Juli 2013</a></time>
+      
+      
+  
+    <h1 class="title">NAS im Eigenbau: HP MicroServer &amp; FreeNAS</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Schon seit einiger Zeit herrschte auf meiner Festplatte chronischer Platzmangel. Filme, Musik und Fotos verbrauchen eine Menge Speicherplatz und sobald etwas Neues zur Sammlung hinzukam, musste dafür etwas Altes weichen. Weil das auf Dauer wirklich keinen Spaß macht und ich meine Mediendateien gerne bequem und dauerhaft im LAN zur Verfügung stellen wollte, war die Lösung klar: <em>Ein NAS musste her!</em></p>
+<p>Was nun folgte war die Qual der Wahl. <a href="http://www.drobo.com/">Drobo</a>, <a href="http://www.qnap.com/">QNAP</a>, <a href="http://www.synology.com/">Synology</a>, <a href="http://www.readynas.com/">ReadyNAS</a>, oder doch etwas Selbstgebasteltes? Die Auswahl an Anbietern und erst recht an angebotenen Geräten ist doch recht beachtlich. Nach einem ersten Blick auf die jeweiligen Preise, hatte sich das Feld jedoch schnell gelichtet. Eine Fertig-NAS-Lösung kam aufgrund des bescheidenen Preis-Leistungs-Verhältnisses nicht in Frage. Es sollte also eine Eigenbaulösung werden.</p>
+<a id="more"></a>
+
+<h2 id="HP_ProLiant_MicroServer_to_the_Rescue">HP ProLiant MicroServer to the Rescue</h2>
+<img class=" img-topic" title="HP ProLiant MicroServer N54L - Front geschlossen" src="/nas-im-eigenbau-hp-microserver-freenas/n54l-front-closed.jpg"></img><br><img class=" img-topic" title="HP ProLiant MicroServer N54L - Front offen" src="/nas-im-eigenbau-hp-microserver-freenas/n54l-front-open.jpg"></img><br><img class=" img-topic" title="HP ProLiant MicroServer N54L - Rückseite" src="/nas-im-eigenbau-hp-microserver-freenas/n54l-back.jpg"></img>
+
+<p>Glücklicherweise sind die MicroServer von HP wie geschaffen für den Einsatz als NAS und noch dazu relativ preiswert. In meinem Fall wurde es ein <a href="http://www8.hp.com/uk/en/products/proliant-servers/product-detail.html?oid=5336624">HP ProLiant MicroServer N54L</a>. Für gerade mal <strong>185 €</strong> bietet er folgendes:</p>
+<ul>
+<li>AMD Turion II Neo N54L Dual-Core @ 2,2 Ghz</li>
+<li>2 GB DDR3 Unbuffered ECC RAM @ 800 MHz (PC3-10600E)</li>
+<li>Onboard AMD HD4200 VGA: 128MB, 1920x1200 @ 60hz</li>
+<li>6x SATA 2.0; 4x intern/HDD, 1x intern/ODD, 1x eSATA extern/Rückseite</li>
+<li>4x 3,5” HDD-Bays, 1x 5,25” ODD-Bay</li>
+<li>Onboard NC107i PCI Express Gigabit 10/100/1000</li>
+<li>1x PCIe 2.0 16x Low-Profile, 1x PCIe 2.0 1x Low-Profile</li>
+<li>7x USB 2.0; 2 Rückseite, 4 Front, 1 intern</li>
+<li>150 W Netzteil</li>
+</ul>
+<p>Der Arbeitsspeicher lässt sich, entgegen der Behauptung von HP, auf bis zu <em>16 GB (2x8)</em> erweitern. Neben <a href="http://en.wikipedia.org/wiki/ECC_memory">ECC-RAM</a> lässt sich auch ganz normaler DDR3-RAM verbauen. Auch die Kombination von ECC und normalem RAM ist angeblich möglich.</p>
+<p>Offiziell arbeiten der ODD-SATA-Anschluss und der eSATA-Anschluss mit nur 1,5 Gbit/s im <em>IDE-Modus</em>. Mit einem <a href="http://www.avforums.com/forums/networking-nas/1521657-hp-n36l-n40l-n54l-microserver-updated-ahci-bios-support.html">modifizierten BIOS von TheBay</a> lassen sich beide jedoch mit schnellen <em>3,0 Gbit/s</em> im <em>AHCI-Modus</em> betreiben. Da sich im 5,25”-Schacht problemlos eine weitere 3,5”-HDD einbauen lässt, hat man letztendlich ein <strong>5-Bay-NAS</strong>; mit etwas Bastelarbeit oder einer externen HDD sogar ein <em>6-Bay-NAS</em>. Manche Leute haben es auch geschafft bis zu <em>neun 3,5” Platten</em> unterzubringen. Aufgrund der Wärmeentwicklung bezweifle ich allerdings, dass das auf Dauer gutgeht.</p>
+<p>Der Server macht einen wirklich gut durchdachten Eindruck. Alle Komponenten sind mit relativ geringem Aufwand erreichbar. Auch die Verarbeitung lässt keine Wünsche offen. Besonders nett: Alle benötigten Schrauben so wie Werkzeug sind auf der Innenseite der Fronttür untergebracht. Man kann also direkt loslegen.</p>
+<h2 id="Darf’s_auch_ein_bisschen_mehr_sein?">Darf’s auch ein bisschen mehr sein?</h2>
+<p>Blieb noch die Frage offen, wie ich mein Eigenbau-NAS bestücken sollte. Klar war, dass es mit fünf HDDs auf jeden Fall voll bestückt werden soll. Nicht so klar war die Größe der HDDs; drei Terabyte oder doch besser vier? Letztendlich hat der Preis entschieden und meine Wahl fiel auf die günstigeren <a href="http://wd.com/global/products/specs/?driveID=1087&amp;language=3">WD Red 3 TB Platten</a>.</p>
+<p>Bei wem der Geldbeutel etwas lockerer sitzt, dem seien die etwas teureren <a href="http://www.seagate.com/de/de/internal-hard-drives/nas-drives/nas-hdd/">4 TB NAS-Festplatten von Seagate</a> empfohlen. Hier kostet das Gigabyte zwar etwas mehr, dafür ist die Performance aber auch ein klein wenig besser.</p>
+<p>Von <em>normalen</em> Desktop-HDDs würde ich für den NAS-Betrieb übrigens abraten. Sollte man ein wirklich großes NAS mit mehr als fünf HDDs planen, sollte man sogar über den Einsatz von echten Server-Platten nachdenken. Ohne <em>Rotational-Vibration-Cancellation</em> kann es ansonsten zu Problemen kommen.</p>
+<p>Beim Arbeitsspeicher war dann nicht kleckern sondern klotzen angesagt. Da ich unbedingt <a href="http://www.freenas.org/">FreeNAS</a> in Verbindung mit <a href="http://en.wikipedia.org/wiki/ZFS">ZFS</a> verwenden wollte, musste es schon etwas mehr sein als die vorinstallierten 2 GB. Eine Faustregel besagt, dass man etwa <em>1 GB RAM pro 1 TB Festplattenspeicher</em> einplanen sollte. Bei den von mir angedachten 15 TB waren 16 GB RAM also ideal. Außerdem habe ich mich für den etwas teureren ECC-RAM entschieden, da ZFS den Arbeitsspeicher intensiv nutzt und die Fehlerkorrektur von ZFS nur bei Daten im Dateisystem zur Anwendung kommt.</p>
+<p>Um das ganze Paket abzurunden, habe ich mir noch eine etwas performantere Anbindung ans LAN gegönnt. Anstatt den Onboard-Gigabit-Anschluss zu nutzen, kommt eine <a href="http://h18004.www1.hp.com/products/servers/networking/nc360t/">HP NC360T PCIe Dual Port Gigabit Adapter</a> zum Einsatz. Dieser bietet unter anderem <a href="https://en.wikipedia.org/wiki/Link_aggregation">Link-Aggregation</a> und <a href="http://en.wikipedia.org/wiki/Jumbo_frame">Jumbo-Frames</a> und ist bereits für ca. <strong>25 €</strong> gebraucht auf eBay erhältlich.</p>
+<h2 id="Zusammenfassung">Zusammenfassung</h2>
+<p>Alles in allem habe ich folgende Teile benötigt:</p>
+<ul>
+<li>HP ProLiant MicroServer N54L - 185 €</li>
+<li>Kingston 16 GB Unbuffered ECC DDR3 RAM - 147 €</li>
+<li>HP NC360T PCIe Dual Port Gigabit Adapter - 25 €</li>
+<li>5x WD Red 3 TB - 585 €</li>
+<li>Sharkoon HDD Vibe FIxer - 14 €</li>
+<li>Molex-zu-SATA-Power-Adapter - 0 € (bereits vorhanden)</li>
+<li>SATA-Kabel - 0 € (bereits vorhanden)</li>
+</ul>
+<p>Macht insgesamt also <strong>956 €</strong> für ein performantes NAS mit <em>12 TB nutzbarem Speicher</em> und genug Redundanz um den Verlust einer Platte zu verkraften; vorausgesetzt man nutzt <a href="http://en.wikipedia.org/wiki/Non-standard_RAID_levels#RAID-Z">RAID-Z1</a> oder <a href="http://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_5">RAID-5</a>. Falls man kein ZFS nutzt, einen etwas einfacheren 5,25”-Einbaurahmen kauft und auf den Dual-Port-LAN-Adapter verzichtet, könnte man die Kosten sogar auf 773 € reduzieren.</p>
+<h3 id="Weitere_Infos">Weitere Infos</h3>
+<ul>
+<li><a href="http://www.hardwareluxx.de/community/f101/hp-proliant-n36l-n40l-n54l-microserver-752079.html">HP ProLiant MicroServer N36L/N40L/N54L Sammelthread</a></li>
+<li><a href="http://n40l.wikia.com/wiki/HP_MicroServer_N40L_Wiki">HP MicroServer N40L Wiki</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/netzwerk/">Netzwerk</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/freenas/">FreeNAS</a>, <a href="/tags/nas/">NAS</a>, <a href="/tags/hp-n54l/">HP N54L</a>, <a href="/tags/zfs/">ZFS</a>
+  </div>
+
+        
+
+
+  <div class="addthis" data-social-share-privacy="true"></div>
+
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:byteland.cc">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/blog/">Blog</a><small>1</small></li>
+  
+    <li><a href="/categories/netzwerk/">Netzwerk</a><small>2</small></li>
+  
+    <li><a href="/categories/spiele/">Spiele</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2014 El Cattivo
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script src="/js/jquery.cookies.js"></script>
+<script src="/js/jquery.socialshareprivacy.min.autoload.js"></script>
+<script src="/js/jquery.socialshareprivacy.min.de.js"></script>
+
+
+
+<script type="text/javascript">
+var disqus_shortname = 'byteland';
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+<script type="text/javascript">
+$('document').ready(function () {
+  $('section#comment').hide();
+});
+</script>
+
+<script type="application/x-social-share-privacy-settings">
+{
+  "path_prefix": "/",
+  "css_path": "css/jquery.socialshareprivacy.min.css",
+  "language": "de",
+  "layout": "line",
+  "services": {
+    "buffer": { "status": false },
+    "delicious":{ "status": false },
+    "disqus": {
+      "status": true,
+      "shortname": "byteland",
+      "onclick": "$('section#comment').show();$.getScript('//byteland.disqus.com/embed.js');" },
+    "facebook": { "status": false },
+    "fbshare": { "status": false },
+    "flattr": { "status": false },
+    "gplus": { "status": true },
+    "hackernews": { "status": false },
+    "linkedin": { "status": false },
+    "mail": { "status": false },
+    "pinterest": { "status": false },
+    "reddit": { "status": false },
+    "stumbleupon": { "status": false },
+    "tumblr": { "status": false },
+    "twitter": { "status": true },
+    "xing": { "status": false }
+  }
+}
+</script>
+
+
+</body>
+</html>
